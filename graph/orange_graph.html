@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>OrangeRed Area Chart</title>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.4/dist/chart.umd.min.js"></script>
+<style>
+  html, body {
+    margin: 0;
+    height: 100%;
+    background: #23252b02;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    scrollbar-width: none;
+    overflow: hidden;
+  }
+  .chart-wrap {
+    width: 100vw;
+    max-width: 700px;
+    height: 320px;
+    background: #23252b00;
+  }
+</style>
+</head>
+<body>
+
+<div class="chart-wrap">
+  <canvas id="areaChart"></canvas>
+</div>
+
+<script>
+  const mainData  = [10, 22, 30, 26, 38, 46, 40, 52, 60, 55, 68, 78];
+  const trendData = [4, 8, 13, 18, 22, 27, 31, 36, 41, 46, 52, 58];
+  const labels = mainData.map((_, i) => i); // no visible labels, just index positions
+
+  window.addEventListener('load', function () {
+    const canvas = document.getElementById('areaChart');
+    const ctx = canvas.getContext('2d');
+
+    const gradient = ctx.createLinearGradient(0, 0, 0, canvas.height || 320);
+    gradient.addColorStop(0, 'rgba(255,69,0,0.9)');   // orangered
+    gradient.addColorStop(0.5, 'rgba(200,40,0,0.5)');
+    gradient.addColorStop(1, 'rgba(35,37,43,0)');
+
+    new Chart(ctx, {
+      type: 'line',
+      data: {
+        labels: labels,
+        datasets: [
+          {
+            data: mainData,
+            borderColor: '#ff4500',
+            borderWidth: 3,
+            backgroundColor: gradient,
+            fill: true,
+            tension: 0.45,
+            pointRadius: 0,
+            pointHoverRadius: 0
+          },
+          {
+            data: trendData,
+            borderColor: '#cfcfcf',
+            borderWidth: 2,
+            borderDash: [2, 6],
+            fill: false,
+            tension: 0.45,
+            pointRadius: 0,
+            pointHoverRadius: 0
+          }
+        ]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+          legend: { display: false },
+          tooltip: { enabled: false }
+        },
+        scales: {
+          x: { display: false, grid: { display: false }, ticks: { display: false } },
+          y: { display: false, grid: { display: false }, ticks: { display: false } }
+        },
+        layout: { padding: 0 },
+        elements: {
+          line: { borderJoinStyle: 'round' }
+        }
+      }
+    });
+  });
+</script>
+
+</body>
+</html>

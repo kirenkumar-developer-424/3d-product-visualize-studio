@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../styles/header.css">
+    <link rel="stylesheet" href="../styles/footer.css">
+    <link rel="stylesheet" href="../styles/animation.css">
+    <link rel="stylesheet" href="./contact.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo-box">
+            <div class="logo">
+                <img src="../assets/images/logo.png" alt="Logo">
+            </div>
+            <div class="logo-name">
+                <b>TF 3D</b>
+                <!-- <p>THE FREELANCER 3D</p> -->
+            </div>
+        </div>
+        <nav class="menu-box">
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="./about.html">About</a></li>
+                <li><a href="../pages/works.html">Works</a></li>
+                <li><a href="./services.html">Services</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="profile-box">
+            <div class="start-project-button">
+                <a href="#form-box">START A PROJECT</a>
+            </div>
+            <div class="menu-button">
+                <label for="menu-button">
+                    <i class="fa-solid fa-bars"></i>
+                    <input type="checkbox" name="menu" id="menu-button">
+                </label>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="hero-section">
+            <video src="../assets/videos/bg--video.mp4" muted loop autoplay></video>
+            <div class="hero-box">
+                <div class="hero-container">
+                    <div class="tag"><span class="blink"></span><p>TRANSMISSION // INTAKE PORTAL v4.2</p></div>
+                    <h1>LET'S BRING <br>YOUR <br><span class="text-orange"> PRODUCT</span> <br>TO LIFE</h1>
+                    <p>Have an upcoming product launch or need photorealistic CGI? Drop your project specs below for a response within 24 hours.</p>
+                </div>
+                <div class="contact-container">
+                    <div class="contact-box">
+                        <span class="bubble"></span>
+                        <div class="tag-1">🟢 Available for Q2/Q3 Projects</div>
+                        <p>Studio Direct Mail</p>
+                        <h3>hello@tf3dstudio.com</h3>
+                        <p>Encrypted GPG key available upon request</p>
+                        <div class="time-zone-box">
+                            <div class="tag"><i class="fa-solid fa-earth-americas"></i> <span> Studio Coverage & Timezones</span></div>
+                            <h4>Available Worldwide</h4>
+                            <p>Synchronized production pipelines across EST, GMT, and CET operating windows.</p>
+                        </div>
+                        <div class="consultation-box">
+                            <p class="tag"><span>Direct Consultation</span><i class="fa-solid fa-headset"></i></p>
+                            <h3>CAD Review Call</h3>
+                            <p>Schedule a 20-min CAD Review & Discovery Call with our Lead Visualization Director to evaluate polygon tolerances, render pipelines, and material fidelity.</p>
+                            <a href="#">Book 20-Min Screen Share <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                        </div>
+                        <div class="protection-box">
+                            <h3 class="tag"><i class="fa-solid fa-shield-halved"></i> <span> Strict IP Protection & NDA Ready</span></h3>
+                            <p>We safeguard confidential industrial prototypes, unannounced consumer electronics, and proprietary patent assets under mutual non-disclosure terms.</p>
+                        </div>
+                        <div class="bottom-tag-box">
+                            <p>Visual Broadcast Network</p>
+                            <div>
+                                <a href="https://www.linkedin.com/" target="_blank" class="tag"><i class="fa-brands fa-linkedin"></i></a>
+                                <a href="https://www.instagram.com/" target="_blank" class="tag"><i class="fa-brands fa-square-instagram"></i></a>
+                                <a href="https://www.youtube.com/" target="_blank" class="tag"><i class="fa-brands fa-youtube"></i></a>
+                                <a href="https://discord.com/" target="_blank"class="tag"><i class="fa-brands fa-discord"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-box" id="form-box">
+                        <h3>INTERACTIVE PROJECT BRIEF</h3>
+                        <form action="#">
+                            <div class="input-section-1">
+                                <div class="full-name">
+                                    <label for="full_name">Full Name *</label>
+                                    <input type="text" id="full_name" name="full_name" placeholder="Elona Restova">
+                                </div>
+                                <div class="company-name">
+                                    <label for="company_name">Company/Brand *</label>
+                                    <input type="text" id="company_name" name="company_name" placeholder="Apex Industial Dynamics">
+                                </div>
+                                <div class="company-email">
+                                    <label for="company_email">Corporate Email</label>
+                                    <input type="text" id="company_email" name="company_email" placeholder="elena@apex.design">
+                                </div>
+                                <div class="phone">
+                                    <label for="phone">Direct Contact Phone</label>
+                                    <input type="tel" name="phone" id="phone" placeholder="+91 99494 93292">
+                                </div>
+                            </div>
+                            <p>Target Capabilities / Service Scope *</p>
+                            <div class="input-section-2">
+                                <div class="option">
+                                    <input type="checkbox" name="scope" id="scope">
+                                    <label for="scope">Target Capabilities / Service Scope *</label>
+                                </div>
+                                <div class="option">
+                                    <input type="checkbox" name="animation" id="animation">
+                                    <label for="animation">3D Animation & Motion CGI</label>
+                                </div>
+                                <div class="option">
+                                    <input type="checkbox" name="assembly" id="assembly">
+                                    <label for="assembly">Exploded Mechanical Assembly</label>
+                                </div>
+                                <div class="option">
+                                    <input type="checkbox" name="model" id="model">
+                                    <label for="model">Realtime WebGL / AR Model</label>
+                                </div>
+                                <div class="option">
+                                    <input type="checkbox" name="full_launch" id="full_launch">
+                                    <label for="full_launch">Full Launch Campaign (Commercial Stills, Teaser Reel, Key Visuals)</label>
+                                </div>
+                            </div>
+                            <p>Estimated Production Budget Allocation</p>
+                            <div class="input-section-3">
+                                <label class="radio-options" for="budget_1">
+                                    <input type="radio" name="budget" id="budget_1">
+                                    <div>
+                                        <h3>< $2.5k</h3>
+                                        <p>Sprint Asset</p>
+                                    </div>
+                                </label>
+                                <label class="radio-options" for="budget_2">
+                                    <input type="radio" name="budget" id="budget_2">
+                                    <div>
+                                        <h3>$2.5k–$5k</h3>
+                                        <p>Key Visuals</p>
+                                    </div>
+                                </label>
+                                <label class="radio-options" for="budget_3">
+                                    <input type="radio" name="budget" id="budget_3">
+                                    <div>
+                                        <h3>$5k–$10k</h3>
+                                        <p>Cinematic Spot</p>
+                                    </div>
+                                </label>
+                                <label class="radio-options" for="budget_4">
+                                    <input type="radio" name="budget" id="budget_4">
+                                    <div>
+                                        <h3>$10k+</h3>
+                                        <p>Full Production</p>
+                                    </div>
+                                </label>
+                            </div>
+                            <p>Target Production Timeline</p>
+                            <div class="input-section-4">
+                                <select name="timeline" id="timeline">
+                                    <option value="standard">Standard Delivery (2-3 Weeks Iterative Sprint)</option>
+                                    <option value="rush">Rush Execution(< Weak Express Track)</option>
+                                    <option value="flexible">Flexible or Rolling Product Launch Pipeline</option>
+                                </select>
+                            </div>
+                            <p>CAD Droppoint / Reference Files</p>
+                            <div class="input-section-5">
+                                <label for="file_upload" class="file-upload">
+                                    <input type="file" name="file" id="file_upload">
+                                    <span class="logo"><i class="fa-solid fa-cloud-arrow-up"></i></span>
+                                    <h3>Drag & drop .STEP, .IGES, .OBJ, reference PDFs</h3>
+                                    <p>or click to browse local filesystem (Max package payload: 500MB)</p>
+                                </label>
+                            </div>
+                            <p>Project Message & Design Specs *</p>
+                            <div class="input-section-6">
+                                <textarea name="message" id="message" cols="50" rows="5" placeholder="Detail your product concept, material finish expectations, camera motion preferences, and any reference inspirations..."></textarea>
+                            </div>
+                            <div class="input-section-7">
+                                <div class="tag">
+                                    <p class="lock-logo"><i class="fa-solid fa-lock"></i></p>
+                                    <p> 256-BIT SSL ENCRYPTED TRANSMISSION</p>
+                                </div>
+                                <div class="submit-button">
+                                    <input type="submit" value="SUBMIT PROJECT BRIEF">
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="phase-container">
+                    <div class="phase">
+                        <span class="tag">PHASE</span>
+                        <span class="number">1</span>
+                        <h3>CAD Ingestion & Prep</h3>
+                        <p>We inspect boundary representation geometries, resolve surface topology anomalies, and standardize UV layout coordinates.</p>
+                    </div>
+                    <div class="phase">
+                        <span class="tag">PHASE</span>
+                        <span class="number">2</span>
+                        <h3>PBR Shader Craft</h3>
+                        <p>Physics-based anisotropic metallics, microscopic micro-facet roughness, and subsurface scatter calibrations for true-to-life tactile finish.</p>
+                    </div>
+                    <div class="phase">
+                        <span class="tag">PHASE</span>
+                        <span class="number">3</span>
+                        <h3>Master Multi-Pass Output</h3>
+                        <p>Multi-channel 32-bit EXR deliverables tailored for print, cinematic broadcast, interactive e-commerce, and digital showroom deployment.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+            <div class="footer-container">
+                <div class="box">
+                    <h3>TF3D</h3>
+                    <p>Pioneering high-precision 3D product visualization, synthetic cinematics, and digital craft for global industrial design and luxury hardware brands.</p>
+                    <div class="footer-tag">
+                        <p><span class="blink"></span> Studio Availability: Q3/Q4 Active</p>
+                    </div>
+                </div>
+                <div class="box">
+                    <h3>Pipeline & Index</h3>
+                    <ul>
+                        <li>Overview</li>
+                        <li>Selected Reels</li>
+                        <li>Visual Capabilities</li>
+                        <li>Studio Philosophy</li>
+                        <li>Direct Line</li>
+                    </ul>
+                </div>
+                <div class="box">
+                    <h3>Network // Feeds</h3>
+                    <ul>
+                        <li>ArtStation Pro 01</li>
+                        <li>Behance Verified 02</li>
+                        <li>Instagram Studio 03</li>
+                        <li>LinkedIn Corporate 04</li>
+                    </ul>
+                </div>
+                <div class="box">
+                    <h3>Initiate Collaboration</h3>
+                    <p>Receive quarterly technical teardowns, real-time lighting studies, and CGI master reels.</p>
+                    <p>UTC+01 // PARIS / BERLIN / LONDON PIPELINE</p>
+                </div>
+            </div>
+            <div class="copyright-container">
+                <p>© 2026 TF3D THE FREELANCER 3D. ALL RIGHTS RESERVED.</p>
+                <p>CGI // VFX // PRODUCT VISUALIZATION  LOC: 52.5200° N, 13.4050° E</p>
+            </div>
+    </footer>
+</body>
+</html>

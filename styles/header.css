@@ -1,0 +1,360 @@
+:root {
+    /* BRAND COLORS */
+    --color-primary: #FF7A00;
+    --color-secondary: #FFA800;
+    --color-tertiary: #FF5500;
+
+    /* BACKGROUND COLORS */
+    --bg-body: #0A0A0C;
+    --bg-surface: #131315;
+    --bg-card: #201F21;
+    --bg-card-hover: #2A2A2C;
+
+    /* TEXT COLORS */
+    --text-primary: #F5F5F5;
+    --text-secondary: #B8B6B8;
+    --text-muted: #858287;
+    --text-inverted: #0A0A0C;
+
+    /* ACCENT / UI COLORS */
+    --accent-soft: #FFB68B;
+    --accent-light: #FFD7C2;
+    --accent-dark: #C94F00;
+
+    /* TYPOGRAPHY */
+    --font-headline: "Space Grotesk", sans-serif;
+    --font-body: "Geist", sans-serif;
+    --font-label: "JetBrains Mono", monospace;
+}
+/* Universal selector */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font-body);
+}
+header{
+    background-color: var(--bg-surface);
+    width: 100%;
+    height: 8vh;
+    position: fixed;
+    top: 0px;
+    left: 0%;
+    border-radius: 0px;
+    box-shadow: 2px 5px 5px 1px #000000bd;
+    display: flex;
+    gap: 10px;
+    z-index: 999;
+    font-family: var(--font-headline);
+    animation: top-to-bottom 1s ease-in-out 100ms;
+    animation-iteration-count: 1;
+}
+/* Logo box  */
+.logo-box{
+    width: 30%;
+    height: 100%;
+    /* background-color: var(--accent-dark); */
+    padding-left: 1%;
+    display: flex;
+    &.logo-box div{
+        display: flex;
+    }
+}
+.logo{
+    width:20%;
+    height: 100%;
+    /* background-color: red; */
+    align-items: center;
+    justify-content: center;
+}
+.logo img{
+    width: 40px;
+    height: 40px;
+}
+.logo-name{
+    width: 80%;
+    height: 100%;
+    flex-direction: column;
+    justify-content: center;
+    /* background-color: green; */
+}
+.logo-name b{
+    font-size: 18px;
+    color: white;
+    &:hover{
+        color: var(--color-tertiary);
+    }
+}
+.logo-name p{
+    font-size: 13px;
+    color: var(--accent-soft);
+}
+.menu-box{
+    width: 40%;
+    height: 100%;
+    transition: 1s;
+}
+.menu-box ul{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items:end;
+    justify-content: center;
+    gap: 20px;
+    list-style-type: none;
+}
+.menu-box ul li{
+    height: 90%;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+}
+.menu-box ul li a{
+    text-decoration: none;
+    color: var(--accent-light);
+    padding: 5px 0px;
+}   
+.menu-box ul li a:hover {
+    border-bottom: solid 2px var(--accent-dark);
+    transition: 500ms;
+}
+.profile-box{
+    width: 30%;
+    height: 100%;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    padding: 0px 1%;
+}
+.start-project-button{
+    background-color:var(--color-primary);
+    box-shadow: 0px 0px 9px 1px var(--accent-dark);
+    width: 40%;
+    height: 55%;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 1s;
+}
+.start-project-button:hover{
+    background-color:orangered;
+}
+.start-project-button a{
+    text-decoration: none;
+    font-size: 10px;
+    color: white;
+}
+.menu-button{
+    display: none;
+    visibility: hidden;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.menu-button input[type="checkbox"]{
+    display: none;
+}
+.menu-button i{
+    cursor: pointer;
+    color: white;
+    font-size: 30px;
+
+}
+
+@media (max-width:575.99px) {
+    /* Header section */
+    header{
+        width: 100%;
+        height: 8vh;
+        padding: 0px 20px;
+    }
+    /* Logo Box style */
+    .logo-box{
+        width: 50%;
+    }
+    .logo img{
+        width: 40px;
+        height: 40px;
+    }
+    .logo{
+        width: 30%;
+    }
+    .logo-name{
+        width: 50%;
+        &.logo-name p{
+            display: none;
+        }
+    }
+    .menu-box{
+        width: 90%;
+        height: 40vh;
+        position: absolute;
+        top: -100vh;
+        background-color: #000000f3;
+        border-radius: 10px;
+    }
+    /* Menu box */
+    .menu-box ul{
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+    }
+    .menu-box ul li{
+        width: 90%;
+        height: 10%;
+        padding: 3% 0px;
+        flex-direction: column;
+        border-bottom: solid 1px rgba(255, 136, 92, 0.048);
+    }
+    /* Profile box */
+    .profile-box{
+        width: 50%;
+    }
+    .start-project-button{
+        visibility: hidden;
+    }
+    .profile-img-box img{
+        width: 40px;
+        height: 40px;
+    }
+    /* Menu button */
+    .menu-button{
+        display: inline-block;
+        visibility: visible;
+        width: 40px;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    header:has(.menu-button input:checked) .menu-box{
+        top: 10vh;
+    }
+    /* Footer */
+    .footer-container{
+        flex-direction:column;
+    }
+    .footer-container .box{
+        width: 100%;
+    }
+    .footer-container .box:nth-child(1){
+        width: 100%;
+    }
+    .copyright-container{
+        flex-direction: column-reverse;
+        align-items: center;
+        gap: 30px;
+        text-align: center;
+    }
+}
+@media (min-width:576px) and (max-width:767.99px) {
+    /* Header */
+    header{
+        width: 100%;
+        height: 10vh;
+    }
+    .logo-box{
+        width: 50%;
+    }
+    .menu-box{
+        width: 100%;
+        height: 60vh;
+        position: absolute;
+        top: -100vh;
+        background-color: #000000f3;
+        border-radius: 10px;
+    }
+    .menu-box ul{
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+    }
+    .menu-box ul li{
+        width: 100%;
+        height: 10%;
+        flex-direction: column;
+        border-bottom: solid 1px rgba(255, 136, 92, 0.048);
+    }
+    .start-project-button{
+        width: 50%;
+        height: 50%;
+    }
+    .profile-box{
+        width: 50%;
+    }
+    .profile-img-box img{
+        width: 50px;
+        height: 50px;
+    }
+    .menu-button{
+        display: inline-block;
+        visibility: visible;
+        width: 40px;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    header:has(.menu-button input:checked) .menu-box{
+        top: 10vh;
+    }
+}
+
+/* MD Tablet*/
+@media (min-width:768px) and (max-width:991.99px) {
+   
+ /* Header */
+    header{
+        width: 100%;
+        height: 7vh;
+    }
+    .logo-box{
+        width: 50%;
+    }
+    .menu-box{
+        width: 100%;
+        height: 60vh;
+        position: absolute;
+        top: -100vh;
+        background-color: #000000f3;
+        border-radius: 10px;
+    }
+    .menu-box ul{
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+    }
+    .menu-box ul li{
+        width: 100%;
+        height: 10%;
+        flex-direction: column;
+        border-bottom: solid 1px rgba(255, 136, 92, 0.048);
+    }
+    .start-project-button{
+        width: 35%;
+        height: 5vh;
+    }
+    .profile-box{
+        width: 50%;
+        justify-content: space-evenly;
+    }
+    .profile-img-box img{
+        width: 50px;
+        height: 50px;
+    }
+    .menu-button{
+        display: inline-block;
+        visibility: visible;
+        width: 40px;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    header:has(.menu-button input:checked) .menu-box{
+        top: 10vh;
+    }
+}
